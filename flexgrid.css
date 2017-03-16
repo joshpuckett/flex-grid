@@ -36,18 +36,18 @@
 
 /* Devices larger than 700px */
 @media (min-width: 700px) {
-	.one-col										{ flex-basis: 8.333% !important; }
-	.two-col										{ flex-basis: 16.666% !important; }
-	.three-col									{ flex-basis: 25% !important; }
-	.four-col										{ flex-basis: 33.333% !important; }
-	.five-col										{ flex-basis: 41.666% !important; }
-	.six-col										{ flex-basis: 50% !important; }
-	.seven-col									{ flex-basis: 58.333% !important; }
-	.eight-col									{ flex-basis: 66.666% !important; }
-	.nine-col										{ flex-basis: 75% !important; }
-	.ten-col										{ flex-basis: 83.333% !important; }
-	.eleven-col									{ flex-basis: 91.666% !important; }
-	.twelve-col									{ flex-basis: 100% !important; }
+	.one-col				{ flex-basis: 8.333% !important; }
+	.two-col				{ flex-basis: 16.666% !important; }
+	.three-col				{ flex-basis: 25% !important; }
+	.four-col				{ flex-basis: 33.333% !important; }
+	.five-col				{ flex-basis: 41.666% !important; }
+	.six-col				{ flex-basis: 50% !important; }
+	.seven-col				{ flex-basis: 58.333% !important; }
+	.eight-col				{ flex-basis: 66.666% !important; }
+	.nine-col				{ flex-basis: 75% !important; }
+	.ten-col				{ flex-basis: 83.333% !important; }
+	.eleven-col				{ flex-basis: 91.666% !important; }
+	.twelve-col				{ flex-basis: 100% !important; }
 }
 
 /*Vertical & Horizontal Alignment*/
