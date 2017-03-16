@@ -1,0 +1,59 @@
+/* Flex Grid by @joshpuckett */
+.container,
+.col,
+.one-col,
+.two-col,
+.three-col,
+.four-col,
+.five-col,
+.six-col,
+.seven-col,
+.eight-col,
+.nine-col,
+.ten-col,
+.eleven-col,
+.twelve-col {
+	box-sizing: border-box;
+	padding: 1rem;
+	padding: 1rem;
+	flex-basis: 100%;
+}
+.row {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+.col {
+	flex: 1 1 0 !important;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+	box-sizing: border-box; 
+}
+
+/* Devices larger than 700px */
+@media (min-width: 700px) {
+	.one-col										{ flex-basis: 8.333% !important; }
+	.two-col										{ flex-basis: 16.666% !important; }
+	.three-col									{ flex-basis: 25% !important; }
+	.four-col										{ flex-basis: 33.333% !important; }
+	.five-col										{ flex-basis: 41.666% !important; }
+	.six-col										{ flex-basis: 50% !important; }
+	.seven-col									{ flex-basis: 58.333% !important; }
+	.eight-col									{ flex-basis: 66.666% !important; }
+	.nine-col										{ flex-basis: 75% !important; }
+	.ten-col										{ flex-basis: 83.333% !important; }
+	.eleven-col									{ flex-basis: 91.666% !important; }
+	.twelve-col									{ flex-basis: 100% !important; }
+}
+
+/*Vertical & Horizontal Alignment*/
+.align-items-start    				{ align-items: flex-start !important; }
+.align-items-end      				{ align-items: flex-end !important; }
+.align-items-center   				{ align-items: center !important; }
+.justify-content-start   			{ justify-content: flex-start !important; }
+.justify-content-end     			{ justify-content: flex-end !important; }
+.justify-content-center  			{ justify-content: center !important; }

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Flex Grid</title>
+  <meta name="description" content="The simplest and smallest flex-box based responsive grid system in the world.">
+  <meta name="author" content="Josh Puckett">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	<style type="text/css">
+		html {
+		  font-size: 62.5%; 
+		}
+		body {
+		  font-size: 1.6em; 
+		  line-height: 1.6;
+		  font-weight: 400;
+		  font-family: 'Roboto', sans-serif;
+		  color: #383838; 
+		  -webkit-font-smoothing: antialiased;
+		  font-weight: 300; 
+		  padding: 0px;
+		  margin: 0px;
+		}
+		h1, h2, h3, p {
+		  margin-bottom: 2rem;
+		  font-weight: 300; 
+		  margin-left: -1rem;
+   		margin-right: -1rem;
+		}
+		h1 { font-size: 6.4rem; line-height: 5.2rem;  letter-spacing: -1px; font-weight: 400;}
+		h2 { font-size: 4.8rem; line-height: 5.2rem; }
+		h3 { font-size: 3.2rem; line-height: 4.8rem;}
+		p { font-size: 2.1rem; line-height: 3.2rem; margin-left: -1rem;
+   		 margin-right: -1rem; margin-bottom: 3rem; }
+
+		.hero-row {
+			width: 100%;
+			background: #f1f1f1;
+			padding: 120px 0px;
+			margin-bottom: 60px;
+		}
+
+		@media (max-width: 600px) {
+			h1 { font-size: 4.8rem; line-height: 5.2rem;  letter-spacing: -1px; font-weight: 400;}
+			h2 { font-size: 3.2rem; line-height: 4.8rem; }
+			h3 { font-size: 2.4rem; line-height: 3.6rem;}
+			p { font-size: 1.8rem; line-height: 2.8rem; margin-left: -1rem;
+	   		 margin-right: -1rem; margin-bottom: 3rem; }
+
+			.hero-row {
+				padding: 40px 0px;
+				margin-bottom: 30px;
+			}
+		}
+
+
+		.hero-row div {
+			background: transparent;
+			border: 0 none;
+			font-family: 'Roboto', sans-serif;
+			color: 272829;
+			text-align: left;
+		}
+
+		.col,
+		.one-col,
+		.two-col,
+		.three-col,
+		.four-col,
+		.five-col,
+		.six-col,
+		.seven-col,
+		.eight-col,
+		.nine-col,
+		.ten-col,
+		.eleven-col,
+		.twelve-col {
+			border: 1px solid #DCE0E0;
+			background: white;
+			text-align: center;
+			font-family: 'Roboto Mono', sans-serif;
+			color: #4F5253;
+			padding-top: 2rem !important;
+			padding-bottom: 2rem !important; 
+		}
+
+		.container {
+			max-width: 1200px;
+		}
+
+		.row {
+			margin-bottom: 10px;
+		}
+
+		pre {
+			 background: #F1F1F1;
+			 padding: 0px 30px;
+			 tab-size: 24px;
+			 margin-left: -1rem;
+   		 margin-right: -1rem;
+   		 margin-top: 20px;
+   		 border-radius: 8px;
+   		 overflow-x: hidden;
+   		 overflow-x: scroll;
+		}
+
+		.source {
+			background: #272829 !important;
+			color: #f1f1f1 !important;
+		}
+
+
+		code {
+			 font-family: 'Roboto Mono', sans-serif;
+			 font-size: 1.2rem;
+		}
+
+		.mono {
+			font-family: 'Roboto Mono', sans-serif;
+		}
+
+		br {
+			display: block;
+			line-height: 3rem;
+		}
+
+		.hero-row a {
+			text-decoration: none;
+			color: white;
+			background: #EC4346;
+			padding: 20px 30px;
+			border-radius: 6px;
+			font-size: 2.0rem;
+			margin-bottom: 20px;
+			margin-top: 1rem;
+			margin-left: -1rem;
+			display: inline-block;
+			font-family: 'Roboto Mono', sans-serif;
+		}
+
+		a {
+			color: #EC4346;
+			text-decoration: none;
+			font-weight: 400;
+		}
+
+  </style>
+  <link rel="stylesheet" href="flexgrid.css">
+ 
+  
+
+</head>
+<body>
+
+<div class="hero-row">
+	<div class="container">
+		<h1>flex-grid</h1>		
+		<div class="row">
+			<div class="eight-col">
+				<h3>The simplest and smallest flex-box based responsive grid system in the world. Everything you need to get started and nothing you don't, in under 60 lines of CSS.</h3>
+
+				<a href="#source">Get the code</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="container">
+		<h3>Setup</h3>		
+		<p>Wrap everything in a <span class="mono">.container</span>, then add <span class="mono">.rows</span> into which you'll place columns. Your container can be any width: this page's is up to 1200px on desktop and 90% on mobile.</p>
+		<br/>
+		<h3>Automatic Equal Width Columns</h3>		
+		<p>Create default columns with <span class="mono">.col</span>; they automatically and equally fill the width available. Use one or as many as you need.</p>
+
+<div class="row">
+	<div class="col">
+		1 of 1
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		1 of 3
+	</div>
+	<div class="col">
+		2 of 3
+	</div>
+	<div class="col">
+		3 of 3
+	</div>
+</div>
+
+
+		<pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		1 of 1
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		1 of 3
+	&lt;/div&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		2 of 3
+	&lt;/div&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		3 of 3
+	&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+
+		<br>
+		
+		<h3>12 Column Grid</h3>		
+		<p>Classes for an intuitive and responsive 12 column grid of whatever width your <span class="mono">.container</span> is. No sizes or confusing modifiers, all you need to remember is how many columns you want. Default responsive behavior is that columns become full width when the browser is under 700px, but of course you can change that.</p>
+
+		<div class="row">
+			<div class="one-col">
+				.one-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="two-col">
+				.two-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="three-col">
+				.three-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="four-col">
+				.four-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="five-col">
+				.five-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="six-col">
+				.six-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="seven-col">
+				.seven-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="eight-col">
+				.eight-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="nine-col">
+				.nine-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="ten-col">
+				.ten-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="eleven-col">
+				.eleven-col
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve-col">
+				.twelve-col
+			</div>
+		</div>
+
+		<pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;one-col&quot;&gt;
+		.one-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;two-col&quot;&gt;
+		.two-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;three-col&quot;&gt;
+		.three-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;four-col&quot;&gt;
+		.four-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;five-col&quot;&gt;
+		.five-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;six-col&quot;&gt;
+		.six-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;seven-col&quot;&gt;
+		.seven-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;eight-col&quot;&gt;
+		.eight-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;nine-col&quot;&gt;
+		.nine-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;ten-col&quot;&gt;
+		.ten-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;eleven-col&quot;&gt;
+		.eleven-col
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;twelve-col&quot;&gt;
+		.twelve-col
+	&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+
+		<br>
+
+		<h3>Mixed Grid + Auto Columns</h3>	
+		<p>You better believe you can mix grid classes with auto width columns. Look at it just work.</p>
+
+		<div class="row">
+			<div class="three-col">
+				.three-col
+			</div>
+			<div class="col">
+				.col
+			</div>
+		</div>
+
+		<pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;three-col&quot;&gt;
+		.three-col
+	&lt;/div&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		.col
+	&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+
+		<br>
+
+		<h2>Vertical Alignment</h2>	
+		<p>Sometimes you want to vertically align items in a row to the start, center, or end of the box. Just add <span class="mono">.align-items-start</span>, <span class="mono">.align-items-center</span>, or <span class="mono">.align-items-end</span> to the row that contains the items.</p>
+		<div style="height: 160px; background: rgba(0,0,0,0.02);" class="row align-items-start">
+			<div class="two-col">
+				.two-col
+				<br>
+				that's really quite tall
+			</div>
+			<div class="col">
+				.col
+			</div>
+		</div>
+		
+		<div style="height: 160px; background: rgba(0,0,0,0.02);" class="row align-items-center">
+			<div class="two-col">
+				.two-col
+				<br>
+				that's really quite tall
+			</div>
+			<div class="col">
+				.col
+			</div>
+		</div>
+
+		<div style="height: 160px; background: rgba(0,0,0,0.02);" class="row align-items-end">
+			<div class="two-col">
+				.two-col
+				<br>
+				that's really quite tall
+			</div>
+			<div class="col">
+				.col
+			</div>
+		</div>
+
+		<pre><code class="html">
+&lt;div style=&quot;height: 160px; background: rgba(0,0,0,0.02);&quot; class=&quot;row align-items-start&quot;&gt;
+	&lt;div class=&quot;two-col&quot;&gt;
+		.two-col
+		&lt;br&gt;
+		that's really quite tall
+	&lt;/div&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		.col
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;height: 160px; background: rgba(0,0,0,0.02);&quot; class=&quot;row align-items-center&quot;&gt;
+	&lt;div class=&quot;two-col&quot;&gt;
+		.two-col
+		&lt;br&gt;
+		that's really quite tall
+	&lt;/div&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		.col
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;height: 160px; background: rgba(0,0,0,0.02);&quot; class=&quot;row align-items-end&quot;&gt;
+	&lt;div class=&quot;two-col&quot;&gt;
+		.two-col
+		&lt;br&gt;
+		that's really quite tall
+	&lt;/div&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		.col
+	&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+
+		<br>
+
+		<h2>Horizontal Alignment</h2>	
+		<p>Of course horizontal alignment works the same way; just add <span class="mono">.justify-content-start</span>, <span class="mono">.justify-content-center</span>, or <span class="mono">.justify-content-end</span> to the row that contains the items.</p>
+
+		<div style="background: rgba(0,0,0,0.02);" class="row justify-content-start">
+			<div class="three-col">
+				.three-col
+			</div>
+		</div>
+		
+		<div style="background: rgba(0,0,0,0.02);" class="row justify-content-center">
+			<div class="three-col">
+				.three-col
+			</div>
+		</div>
+
+		<div style="background: rgba(0,0,0,0.02);" class="row justify-content-end">
+			<div class="three-col">
+				.three-col
+			</div>
+		</div>
+
+		<pre><code class="html">
+&lt;div style=&quot;background: rgba(0,0,0,0.02);&quot; class=&quot;row justify-content-start&quot;&gt;
+	&lt;div class=&quot;three-col&quot;&gt;
+		.three-col
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;background: rgba(0,0,0,0.02);&quot; class=&quot;row justify-content-center&quot;&gt;
+	&lt;div class=&quot;three-col&quot;&gt;
+		.three-col
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;background: rgba(0,0,0,0.02);&quot; class=&quot;row justify-content-end&quot;&gt;
+	&lt;div class=&quot;three-col&quot;&gt;
+		.three-col
+	&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+
+		<br>
+
+		<h2 id="source">flex-grid.css</h2>
+		<p>Copy and paste this into your CSS file to start using it. Don't worry about installing modules or even think about opening Terminal. Just 59 lines of pure bliss.</p>
+
+		<pre class="source"><code class="css">
+/* Flex Grid by @joshpuckett */
+.container,
+.col,
+.one-col,
+.two-col,
+.three-col,
+.four-col,
+.five-col,
+.six-col,
+.seven-col,
+.eight-col,
+.nine-col,
+.ten-col,
+.eleven-col,
+.twelve-col {
+	box-sizing: border-box;
+	padding: 1rem;
+	padding: 1rem;
+	flex-basis: 100%;
+}
+.row {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+.col {
+	flex: 1 1 0 !important;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+	box-sizing: border-box; 
+}
+
+/* Devices larger than 700px */
+@media (min-width: 700px) {
+	.one-col										{ flex-basis: 8.333% !important; }
+	.two-col										{ flex-basis: 16.666% !important; }
+	.three-col										{ flex-basis: 25% !important; }
+	.four-col										{ flex-basis: 33.333% !important; }
+	.five-col										{ flex-basis: 41.666% !important; }
+	.six-col										{ flex-basis: 50% !important; }
+	.seven-col										{ flex-basis: 58.333% !important; }
+	.eight-col										{ flex-basis: 66.666% !important; }
+	.nine-col										{ flex-basis: 75% !important; }
+	.ten-col										{ flex-basis: 83.333% !important; }
+	.eleven-col									{ flex-basis: 91.666% !important; }
+	.twelve-col									{ flex-basis: 100% !important; }
+}
+
+/*Vertical & Horizontal Alignment*/
+.align-items-start    						{ align-items: flex-start !important; }
+.align-items-end      						{ align-items: flex-end !important; }
+.align-items-center   						{ align-items: center !important; }
+.justify-content-start   					{ justify-content: flex-start !important; }
+.justify-content-end     					{ justify-content: flex-end !important; }
+.justify-content-center  					{ justify-content: center !important; }
+		</code></pre>
+<br>
+
+<h2>Why does this exist?</h2>
+<p>Because every other grid system is too complicated and over-abstracted, and isn't suitable for quickly getting started on a new project with the absolute minimum that you need. Created to make your life easier by <a href="http://twitter.com/joshpuckett">@joshpuckett</a>.</p>
+
+
+</div>
+
+
+</body>
+</html>
+
